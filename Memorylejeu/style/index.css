@@ -1,0 +1,166 @@
+/* début de copier coller */
+
+.boutton, #popUpOption h1 {
+    width: 20rem;
+  --c: var(--rgba-primary-4); /* the color */
+  --b: .1em;    /* border length*/
+  --d: 10px;    /* the cube depth */
+  
+  --_s: calc(var(--d) + var(--b));
+  
+  color: var(--couleurtext);
+  border: solid #0000;
+  border-width: var(--b) var(--b) var(--_s) var(--_s);
+  background:
+    conic-gradient(at left var(--d)  bottom var(--d),
+      #0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgb(255 255 255 /0.6) 0) border-box,
+    conic-gradient(at left var(--_s) bottom var(--_s),
+      #0000 90deg,var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
+  transform: translate(calc(var(--d)/-1),var(--d));
+  clip-path: 
+    polygon(
+     var(--d) 0%, 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)),
+     100% calc(100% - var(--d)),
+     var(--d) calc(100% - var(--d))
+    );
+  transition: 0.5s;
+}
+
+.boutton:hover {
+  transform: translate(0,0);
+  clip-path: 
+    polygon(
+     0% var(--d), 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)), 
+     calc(100% - var(--d)) 100%, 
+     0% 100%
+   );
+}
+/* fin du design des boutton*/
+
+
+.zoneCentrale {
+    /* Design */
+    background-color: var(--rgba-primary-3);
+    border-radius: 3em;
+    box-shadow: 0 0 14px rgba(0,0,0,0.3);
+    /* Positionnement de la zone dans la page */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 50vw;
+    height: 40vh;
+    min-height: 15rem;
+    max-width: 500px;
+    padding: 1.5rem;
+    /* Position des cartes dans la zone */
+    display : grid;
+    justify-content: center;
+    gap : 0.3rem;
+}
+
+.grid1 {
+    grid-row: 1/8;
+}
+.grid2 {
+    grid-row: 8/9;
+    display: flex;
+    justify-content: center;
+}
+.grid3 {
+    grid-row: 9/10;
+    display: flex;
+    justify-content: center;
+}
+
+
+#popUpOption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 85vh;
+    width: 60vw;
+    max-width: 550px;
+    max-height: 900px;
+    background-color: var(--rgba-primary-3);
+    border-radius: 3em;
+    box-shadow: 0 0 14px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.popUpBackground {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.active {
+    display: flex !important;
+}
+
+#popUpOption h2 {
+    font-size: 2rem;
+    margin: 10px;
+}
+
+#carroussel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+#liste-carte-carroussel {
+    display: flex;
+    /* La valeur de width correspond à la largeur des images des cartes */
+    max-width: 286px;
+}
+
+/* Bouttons de défilements du carroussel animés */
+.fleche {
+    width: 50px;
+    margin: 20px;
+    z-index:2;
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+}
+
+#gauche {
+    transform:rotate(180deg);
+    visibility: hidden;
+}
+
+#gauche:hover {
+    transform: rotate(180deg) scale(1.1);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+#droite:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+#container button{
+    margin: 10px;
+}

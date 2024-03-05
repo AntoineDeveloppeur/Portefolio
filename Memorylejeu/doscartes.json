@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "nom": "Carte Mystère",
+        "image": "images/doscartes.jpg"
+    },
+    {
+        "id": 2,
+        "nom": "Carte ancienne",
+        "image": "images/doscartes2.jpg"
+    },
+    {
+        "id": 3,
+        "nom": "Chat mignon",
+        "image": "images/doscartes3.jpg"
+    }
+]

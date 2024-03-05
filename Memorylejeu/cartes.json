@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "nom": "les piques",
+        "difficulte": 2,
+        "nombreDeDoublons": 4,
+        "image1": "images/7pique.jpg",
+        "image2": "images/8pique.jpg",
+        "image3": "images/9pique.jpg",
+        "image4": "images/10pique.jpg"
+    },
+    {
+        "id": 2,
+        "nom": "les Bruno",
+        "difficulte": 1,
+        "nombreDeDoublons": 3,
+        "image1": "images/Bruno1.jpg",
+        "image2": "images/Bruno2.jpg",
+        "image3": "images/Bruno3.jpg"
+    },
+    {
+        "id": 3,
+        "nom": "les Amis",
+        "difficulte": 1,
+        "nombreDeDoublons": 3,
+        "image1": "images/hugo.jpg",
+        "image2": "images/loic.jpg",
+        "image3": "images/raphael.jpg"
+    }
+]
+    

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory le jeu</title>
+    <link href="style/style.css" rel="stylesheet" />
+    <link href="style/index.css" rel="stylesheet" />
+    <script src="scripts/jeu.js"  type="module" defer></script>
+    <script src="scripts/options.js" type="module" defer></script>
+    <script src="scripts/main.js" type="module" defer></script>
+</head>
+
+<body>
+    <header>
+        
+    </header>
+
+    <main>
+        <div class="zoneCentrale">
+            <div id="logo-et-nom-du-jeu" class="grid1">
+                <img src="images/logo.png" class="logo">
+                <h1 class="h1"><strong>Memory</strong><br> Le jeu</h1>
+                <img src="images/logo.png" class="logo">
+            </div>
+            <div class="grid2"><button class="boutton" onclick="window.location.href = 'jeu.html';">Jouer</button></div>
+            <div class="grid3"><button class="boutton" >Options</button></div>
+        </div>
+    </main>
+
+    <footer>
+        @Copyright: Le Toine
+    </footer>
+
+    <!-- PopUp d'option -->
+    <div class="popUpBackground">
+        <div id="popUpOption">
+            <h1>Options</h1>
+            <h2>Choix des cartes</h2>
+            <div id="carroussel">
+                <img src="images/fleche.png" class="fleche" id="gauche">
+                <div id="container">
+                    <div id="liste-carte-carroussel">
+                        <img src="images/7pique.jpg" class="carte-carroussel">
+                        <img src="images/8pique.jpg" class="carte-carroussel">
+                        <img src="images/9pique.jpg" class="carte-carroussel">
+                        <img src="images/10pique.jpg" class="carte-carroussel">
+                    </div>
+                    <p>Difficulté</p>
+                    <div>Nb d'étoile</div>
+                    <button id="valider" class="boutton">Valider</button>
+                </div>
+                <img src="images/fleche.png" class="fleche" id="droite">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+
+#encadre-du-jeu {
+    background-color: var(--rgba-primary-3);
+    border-radius: 2rem;
+    padding: 1rem 0.5rem 3rem 0.5rem;
+    margin: 1rem;
+    height: auto;
+    width: 90vw;
+}
+
+.enonce {
+    font-size: 1.5rem;
+}
+
+.carte-a-retourner{
+    position: relative;
+}
+
+.photo {
+    position: relative;
+    border-top: 4px black;
+    max-height: 30vh;
+}
+
+/* Positionnement de l'ensemble cartes + message personnalisé */
+#CartesEtMessages {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    place-items: center;
+    grid-gap: 0.5rem;
+}
+
+/* Positionnement des cartes */
+.grid-cartes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    justify-content: center;
+}
+
+/* Permet d'afficher toute la photo en respectant son ratio d'orgine */
+.grid-cartes, .photo, .dos-de-carte, .carte-carroussel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Positionnement du dos de carte sur la photo grâce à absolute */
+.dos-de-carte, .photo-hover {
+    position : absolute;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-hover {
+    display: none;
+}
+
+.photo-hover:hover {
+    background-color: rgba( 0,  0,  0,0.5);
+    display: flex;
+}
+
+.photorevele {
+    z-index: 1;
+}
+
+.MessagePersonnalise, #ColonneVide {
+    margin-left: auto;
+    margin-right: auto;
+    
+    width: 15vw;    
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MessagePersonnalise {
+    background-color: white;
+    color: var(--rgba-primary-4);
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 0.6rem;
+}
+
+#Encouragement {
+    border-radius: 30px 30px 0px 0px;
+    height : auto;
+}
+
+#LeNbDoublonsATrouver {
+    border-radius: 0px 0px 30px 30px;
+}
+
+.Carte1 { order:1;}
+.Carte2 { order:2;}
+.Carte3 { order:3;}
+.Carte4 { order:4;}
+.Carte5 { order:5;}
+.Carte6 { order:6;}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <link href="style/style.css" rel="stylesheet" />
+    <link href="style/jeu.css" rel="stylesheet" />
+    <script type="module" src="scripts/jeu.js" defer></script>
+    <script type="module" src="scripts/main.js" defer></script>
+    <script type="module" src="scripts/options.js" defer></script>
+</head>
+
+<body>
+    <header>
+        
+    </header>
+
+    <main>
+        <div id="encadre-du-jeu">
+            <div>
+                <h1>Memory</h1>
+                <p class="enonce">Vous jouez avec <strong>3 amis</strong> et <strong>6 cartes</strong></br>
+                Objectif : Trouver les doubles en <strong>5 essais</strong></br>
+                Pour cela, cliquer sur deux cartes avec la même photo pour trouver un ami        
+                </p>
+            </div>
+            <div id="CartesEtMessages">
+                <div>
+                    <div id="Encouragement" class="MessagePersonnalise">A vous de jouer, c'est parti &#128522;</div>
+                    <div id="LeNbDoublonsATrouver" class="MessagePersonnalise">3 doublons à trouver</div>
+                </div>
+                <div class="grid-cartes">
+                    <!-- <div class="carte-a-retourner">
+                        <img src="images/hugo.jpg" class="photo" id="photo-1" alt="photo de Hugo">
+                        <img src="images/doscartes.jpg" class="dos-de-carte" id="dos-de-carte1" alt="dos de la carte mystère">
+                        <div class="photo-hover" id="photo-hover-1">Retourner la carte</div>
+                    </div>
+                    <div class="carte-a-retourner">
+                        <img src="images/Loic.jpg" class="photo" id="photo-2" alt="photo de Loic">
+                        <img src="images/doscartes.jpg" class="dos-de-carte" id="dos-de-carte2" alt="dos de la carte mystère">
+                        <div class="photo-hover" id="photo-hover-2">Retourner la carte</div>
+                    </div>
+                    <div class="carte-a-retourner">
+                        <img src="images/raphael.jpg" class="photo" id="photo-3" alt="photo de Raphaël">
+                        <img src="images/doscartes.jpg" class="dos-de-carte" id="dos-de-carte3" alt="dos de la carte mystère">
+                        <div class="photo-hover" id="photo-hover-3">Retourner la carte</div>
+                    </div>
+                    <div class="carte-a-retourner">
+                        <img src="images/hugo.jpg" class="photo" id="photo-4" alt="photo de Hugo">
+                        <img src="images/doscartes.jpg" class="dos-de-carte" id="dos-de-carte4" alt="dos de la carte mystère">
+                        <div class="photo-hover" id="photo-hover-4">Retourner la carte</div>
+                    </div>
+                    <div class="carte-a-retourner">
+                        <img src="images/Loic.jpg" class="photo" id="photo-5" alt="photo de Loic">
+                        <img src="images/doscartes.jpg" class="dos-de-carte" id="dos-de-carte5" alt="dos de la carte mystère">
+                        <div class="photo-hover" id="photo-hover-5">Retourner la carte</div>
+                    </div>
+                    <div class="carte-a-retourner">
+                        <img src="images/raphael.jpg" class="photo" id="photo-6" alt="photo de Raphaël">
+                        <img src="images/doscartes.jpg" class="dos-de-carte" id="dos-de-carte6" alt="dos de la carte mystère">
+                        <div class="photo-hover" id="photo-hover-6">Retourner la carte</div>
+                    </div> -->
+                    <div id="carte-a-retourner1" class="carte-a-retourner Carte1">
+                        <img src="images/Bruno1.jpg" class="photo" id="photo-1" alt="photo de Bruno">
+                        <img src="images/doscartes.jpg" class="dos-de-carte" id="dos-de-carte1" alt="dos de la carte mystère">
+                        <div class="photo-hover" id="photo-hover-1">Retourner la carte</div>
+                    </div>
+                    <div id="carte-a-retourner2" class="carte-a-retourner Carte2">
+                        <img src="images/Bruno2.jpg" class="photo" id="photo-2" alt="photo de Bruno">
+                        <img src="images/doscartes.jpg" class="dos-de-carte" id="dos-de-carte2" alt="dos de la carte mystère">
+                        <div class="photo-hover" id="photo-hover-2">Retourner la carte</div>
+                    </div>
+                    <div id="carte-a-retourner3" class="carte-a-retourner Carte3">
+                        <img src="images/Bruno3.jpg" class="photo" id="photo-3" alt="photo de Bruno">
+                        <img src="images/doscartes.jpg" class="dos-de-carte" id="dos-de-carte3" alt="dos de la carte mystère">
+                        <div class="photo-hover" id="photo-hover-3">Retourner la carte</div>
+                    </div>
+                    <div id="carte-a-retourner4" class="carte-a-retourner Carte4">
+                        <img src="images/Bruno1.jpg" class="photo" id="photo-4" alt="photo de Bruno">
+                        <img src="images/doscartes.jpg" class="dos-de-carte" id="dos-de-carte4" alt="dos de la carte mystère">
+                        <div class="photo-hover" id="photo-hover-4">Retourner la carte</div>
+                    </div>
+                    <div id="carte-a-retourner5" class="carte-a-retourner Carte5">
+                        <img src="images/Bruno2.jpg" class="photo" id="photo-5" alt="photo de Bruno">
+                        <img src="images/doscartes.jpg" class="dos-de-carte" id="dos-de-carte5" alt="dos de la carte mystère">
+                        <div class="photo-hover" id="photo-hover-5">Retourner la carte</div>
+                    </div>
+                    <div id="carte-a-retourner6" class="carte-a-retourner Carte6">
+                        <img src="images/Bruno3.jpg" class="photo" id="photo-6" alt="photo de Bruno">
+                        <img src="images/doscartes.jpg" class="dos-de-carte" id="dos-de-carte6" alt="dos de la carte mystère">
+                        <div class="photo-hover" id="photo-hover-6">Retourner la carte</div>
+                    </div>
+                </div>
+                <div id="ColonneVide">Ce bloc sera utilisé pour afficher les niveaux</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
